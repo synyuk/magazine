@@ -470,6 +470,14 @@ header nav ul li:hover {
         gap: 1rem;
     }
 }
+.map{
+    grid-column: 12 span;
+    margin-bottom: 100px;
+}
+#map {
+    height: 400px;
+    width: 100%;
+}
 .footer {
     grid-column: span 12;
 }
