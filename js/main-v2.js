@@ -90,7 +90,7 @@ menuBtn.addEventListener("click", function () {
     menu.classList.toggle("open");
 })
 
-//Current data
+//Current date
 const currentDate = document.querySelector("#current-data");
 currentDate.innerHTML = new Date().getFullYear();
 
@@ -127,7 +127,7 @@ function getData() {
 
 getData();
 
-//Auth
+//Auth with Google
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 const authBtn = document.querySelector(".google-auth-button");
