@@ -14,7 +14,7 @@ function createProduct(sale, pic, company, name, rate, price) {
         </div>`
     }else{
         productItem.innerHTML += `<div class="product-image">
-            <img src="/img/icons/empty.png" alt="">
+            <img src="img/icons/empty.png" alt="">
         </div>`
     }
     if(company) {
