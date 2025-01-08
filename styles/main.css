@@ -426,7 +426,9 @@ header .menu-toggle.active .bar:nth-child(3) {
 @media (max-width: 1024px) {
   .hero-image {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
+    margin-top: 90px;
+    padding-right: 0;
   }
 }
 
