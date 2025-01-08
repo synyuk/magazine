@@ -16,9 +16,7 @@ body {
 }
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 16px;
+  display: block;
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;

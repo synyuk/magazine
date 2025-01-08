@@ -1,7 +1,6 @@
 
 .products-list{
   display: grid;
-  grid-column: $grid;
   grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   gap: 30px;
   grid-template-rows: auto;
@@ -45,7 +44,6 @@
   font-weight: 300;
 }
 .products {
-  grid-column: $grid;
   margin-bottom: 113px;
 }
 .product-grid {
