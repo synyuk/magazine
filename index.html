@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Magazine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
     <link rel="shortcut icon" href="img/favicon/favicon.ico" />
@@ -12,7 +13,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
           crossorigin=""/>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
     <div class="container">
@@ -31,14 +32,20 @@
             </nav>
             <div class="cta">
                 <button class="main-btn">Get Started</button>
+                <a class="modal-auth-btn" href="#"><img src="img/icons/auth.svg" alt="Autorization"></a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
         </header>
 
         <section class="hero">
             <div class="hero-text">
-                <div class="title">Exclusive Smart Watch</div>
-                <h1>Let go of the Challenge<br>See yourself better</h1>
-                <p>Connect your conversations with the tools and services that you use to get the job done. With over 1,500 apps and a robust API</p>
+                <div class="title animate__animated animate__lightSpeedInLeft animate__slow">Exclusive Smart Watch</div>
+                <h1 class="animate__animated animate__lightSpeedInLeft animate__slow animate__delay-1s">Let go of the Challenge<br>See yourself better</h1>
+                <p class="animate__animated animate__lightSpeedInLeft animate__slow animate__delay-2s">Connect your conversations with the tools and services that you use to get the job done. With over 1,500 apps and a robust API</p>
                 <div class="cta">
                     <button class="secondary-btn">Get Started</button>
                     <button class="secondary-btn white-btn">How it works</button>
@@ -65,7 +72,17 @@
                 </div>
             </div>
             <div class="hero-image">
-                <img width="497px" src="img/main-pic.webp" alt="watch">
+                <img class="hero-image-watch" width="325px" height="350px" src="img/hero/clock.webp" alt="watch">
+                <img class="hero-image-diagram animate__animated animate__lightSpeedInRight animate__slow animate__delay-3s" width="206px" height="163px" src="img/hero/diagram.png" alt="diagram">
+                <svg class="hero-image-circle-1 animate__animated animate__pulse animate__infinite infinite animate__delay-1s" width="69" height="69" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="34.5" cy="34.5" r="34.5" fill="#FFDDD2"/>
+                </svg>
+                <svg class="hero-image-circle-2 animate__animated animate__pulse animate__infinite infinite animate__delay-2s" width="46" height="46" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="23" cy="23" r="23" fill="#FFDDD2"/>
+                </svg>
+                <svg class="hero-image-circle-3 animate__animated animate__pulse animate__infinite infinite animate__delay-3s" width="46" height="46" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="23" cy="23" r="23" fill="#BEE1E6"/>
+                </svg>
             </div>
         </section>
 
@@ -99,7 +116,7 @@
         </section>
 
         <section class="categories">
-            <h2>Explore by Categories.</h2>
+            <h2>Explore by Categories</h2>
             <p>We provide many categories, choose a category according to your expertise to make it easier to find a job.</p>
             <div class="categories-grid">
                 <div class="popular-categories">
@@ -210,7 +227,7 @@
                     </div>
                 </div>
                 <div class="footer-bottom">
-                    <p class="copyright">©Agon Official 2022</p>
+                    <p class="copyright">©Agon Official <span id="current-data"></span></p>
                     <nav>
                         <a href="#">Privacy policy</a>
                         <a href="#">Cookies</a>
@@ -221,9 +238,24 @@
         </footer>
 
     </div>
+
+<div class="modal-auth">
+    <div class="modal-wrapper">
+        <img src="/img/icons/close.svg" alt="" class="modal-close" />
+        <div class="modal-content">
+            <h3>Sign in</h3>
+            <button class="google-auth-button">
+            <span class="google-auth-button-icon">
+                <img src="/img/icons/google.svg" alt="Google" class="google-icon" />
+            </span>
+                <span class="google-auth-button-text">Sign in with Google</span>
+            </button>
+        </div>
+    </div>
+</div>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
         crossorigin=""></script>
-<script type="module" src="js/main.js"></script>
+<script type="module" src="js/main-v2.js"></script>
 </body>
 </html>

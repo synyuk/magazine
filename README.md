@@ -5,4 +5,6 @@
 ![MVC](img/screenshot.png)
 
 <p>OPTIONS:</p>
-<p>all data is in the file js/data.js</p>
+<p>main-v1.js - data is in the file js/data.js</p>
+<p>main-v2.js - data&auth realize with Firebase</p>
+<p>map leaflet</p>

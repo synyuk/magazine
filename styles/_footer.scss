@@ -1,0 +1,134 @@
+.footer {
+  grid-column: $grid;
+
+  &-logo {
+    border-bottom: 1px solid #D6D8DD;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 16px;
+
+    h3 {
+      font-size: 18px;
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.footer-contact {
+  address {
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    color: #969696;
+    font-style: normal;
+    margin-bottom: 7px;
+  }
+
+  a {
+    color: #4BB4FF;
+    text-decoration: none;
+    margin-bottom: 13px;
+  }
+}
+
+.footer-socials {
+  display: flex;
+  gap: 18px;
+
+  a {
+    display: flex;
+    margin-bottom: 0;
+    &:hover {
+      animation: rotateIn;
+      animation-duration: 1s;
+    }
+  }
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  a {
+    color: #555;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 2px solid #D6D8DD;
+  padding: 20px 0;
+
+  .copyright {
+    color: #969696;
+    font-size: 18px;
+  }
+
+  nav {
+    display: flex;
+    gap: 16px;
+
+    a {
+      margin-right: 1rem;
+      color: #969696;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: $tablet) {
+  .footer-container {
+    grid-template-columns: 2fr 3fr;
+  }
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(max-width: $mobile) {
+  .footer-container {
+    grid-template-columns: none;
+    gap: 16px;
+  }
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+  .footer-bottom {
+    grid-column-end: 1;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .footer-bottom nav {
+    flex-direction: column;
+  }
+}

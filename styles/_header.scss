@@ -1,0 +1,142 @@
+header {
+  position: sticky;
+  z-index: 99;
+  top: 0;
+  grid-column: $grid;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+  color: white;
+  background: #fff;
+  &.active{
+    border-bottom: 1px solid #000;
+  }
+  @media (max-width: $tablet) {
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    flex-direction: row;
+    border-bottom: 1px solid #000;
+    gap: 16px;
+    padding: 16px;
+  }
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .cta{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    .modal-auth-btn{
+      display: flex;
+      img{
+        width: 54px;
+        height: 54px;
+      }
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .main-btn{
+    @media (max-width: $tablet) {
+      padding: 6px 16px;
+    }
+  }
+  nav{
+    @media (max-width: $tablet) {
+      transition: 0.3s all;
+      position: fixed;
+      left: -100%;
+      top: 80px;
+      bottom: 0;
+      width: 100%;
+      &.open{
+        left: 0;
+      }
+    }
+    ul {
+      display: flex;
+      list-style: none;
+      gap: 60px;
+      @media (max-width: $tablet) {
+        flex-direction: column;
+        background: #fff;
+        height: 100%;
+        text-align: center;
+        gap: 40px;
+        padding-top: 30px;
+        flex-direction: column;
+        justify-content: center;
+      }
+      li{
+        &:hover {
+          transform: scale(1.1);
+        }
+        a{
+          color: #000;
+          text-decoration: none;
+          transition: 0.2s all;
+          @media (max-width: $tablet) {
+            font-size: 36px;
+            text-transform: uppercase;
+          }
+          &:hover{
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .menu-toggle{
+    display: none;
+    justify-self: end;
+    &:hover{
+      cursor: pointer;
+    }
+    .bar{
+      display: block;
+      cursor: pointer;
+      width: 25px;
+      height: 3px;
+      background-color: #000;
+      margin: 5px auto;
+      transition: all 0.3s ease-in-out;
+    }
+    &.active{
+      .bar{
+        &:nth-child(1){
+          transform: translateY(8px) rotate(45deg);
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+        &:nth-child(3){
+          transform: translateY(-8px) rotate(-45deg);
+        }
+      }
+    }
+    @media (max-width: $tablet) {
+      display: block;
+    }
+  }
+}
+
+
+@keyframes gradbar {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}

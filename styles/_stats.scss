@@ -1,0 +1,47 @@
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: max-content;
+  gap: 54px;
+  @media (max-width: $tablet) {
+    width: 100%;
+    gap: 16px;
+  }
+  .stats-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: $tablet) {
+      grid-template-columns: 40px 1fr;
+      width: max-content;
+      gap: 30px;
+      &:first-child{
+        margin-left: auto;
+      }
+    }
+    .stats-icon{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      background: #BEE1E6;
+      border-radius: 50%;
+      @media (max-width: $tablet) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .stats-info{
+      display: grid;
+      align-items: center;
+    }
+    .stats-count{
+      font-weight: 600;
+      font-size: 30px;
+    }
+    .stats-name{
+      font-weight: 500;
+      color: #66728B;
+    }
+  }
+}

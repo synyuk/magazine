@@ -1,0 +1,121 @@
+.categories {
+  grid-column: $grid;
+  text-align: center;
+  margin-bottom: 120px;
+
+  h2 {
+    margin-bottom: 25px;
+
+    + p {
+      max-width: 522px;
+      margin: 0 auto 56px auto;
+      color: #475467;
+      @media (max-width: $tablet) {
+        margin: 0 auto 26px auto;
+      }
+    }
+  }
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: 475px 1fr;
+  gap: 35px;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+}
+
+.popular-categories {
+  border-radius: 6px;
+  padding: 39px 32px 19px 32px;
+  background: #FFFFFF;
+  border: 1px solid #D1DAE8;
+  box-shadow: 0px 3px 6px rgba(219, 220, 222, 0.17);
+  @media (max-width: $tablet) {
+    flex: 1;
+  }
+  h3 {
+    text-align: left;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #E4E7EC;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    span {
+      &:first-child {
+        line-height: 34px;
+      }
+    }
+  }
+
+  .count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E4E7EC;
+    color: #006D77;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  grid-template-rows: min-content;
+  gap: 30px;
+  @media (max-width: $tablet) {
+    gap: 1rem;
+    flex: 1;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 46px 1fr;
+  gap: 13px;
+  height: max-content;
+  background: #FFFFFF;
+  border: 1px solid #D1DAE8;
+  border-radius: 6px;
+  padding: 17px 25px;
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: 14px;
+  }
+}
+
+.explore-more {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}

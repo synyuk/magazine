@@ -1,3 +1,4 @@
+//get data from file
 import {product} from "./data.js";
 
 for (let item of product) {
@@ -70,3 +71,25 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 var marker = L.marker([50.44771846014896, 30.492616380116534]).addTo(map);
 
 marker.bindPopup("<b>Our Office</b>").openPopup();
+
+//Desktop menu
+const header = document.querySelector("header");
+window.addEventListener("scroll", function () {
+    if(window.scrollY > 0) {
+        header.classList.add("active");
+    } else {
+        header.classList.remove("active");
+    }
+})
+
+//Mobile menu
+const menuBtn = document.querySelector("#mobile-menu");
+const menu = document.querySelector("header nav");
+menuBtn.addEventListener("click", function () {
+    this.classList.toggle("active");
+    menu.classList.toggle("open");
+})
+
+//Current data
+const currentDate = document.querySelector("#current-data");
+currentDate.innerHTML = new Date().getFullYear();
